@@ -1,30 +1,46 @@
-## Technical Modification Reflection & Modifications
+# Streaming Data Visualization: Sales and NBA Analytics
 
-### What did you observe before your modification?
-The original project featured a single, basic line chart tracking raw total sales over message offsets. While it successfully visualized the data in motion, it lacked deeper analytical insights (such as smoothing out erratic data or grouping by category). Furthermore, while the consumer validated incoming messages against a data contract, rejected messages were merely logged and skipped. There was no robust observability or secondary storage for failures.
+This project demonstrates the power of Apache Kafka for real-time streaming analytics by visualizing live data as it is consumed. It features two distinct pipelines: an extended e-commerce sales pipeline that introduces a Dead Letter Queue (DLQ) alongside dual-panel charts for enhanced observability, and a custom NBA play-by-play pipeline that dynamically correlates player actions to team statistics, visualizing rebounds, fouls, and turnovers as a live game clock ticks down.
 
-### What did you decide to modify and why?
-I decided to implement a dual-subplot visualization and a Dead Letter Queue (DLQ).
-1. **Dual Subplot Visualization:** I added a 5-message moving average to the raw sales line chart and created a second bar chart showing cumulative sales by region. I chose this to provide richer visual analytics—combining trend analysis with categorical aggregation.
-2. **Dead Letter Queue (DLQ):** I modified the consumer to act as a producer for invalid messages, routing them to a DLQ topic. I chose this to improve system reliability, ensuring data engineers can inspect and replay rejected messages later.
+## Custom Project
 
-### Describe your modification using specifics:
-- **Visualization (`live_visualizations_critical_section.py`):** Changed the Matplotlib layout to use `plt.subplots(2, 1)`. The top subplot tracks raw sales (`y_values`) and a dynamically calculated 5-message moving average (`ma_values`). The bottom subplot aggregates totals by `region_id` into a dictionary (`region_sales`) and visualizes them using `ax.bar()`.
-- **Dead Letter Queue (`kafka_consumer_critical_section.py`):** Imported `create_producer` and `produce_kafka_message`. Initialized a DLQ producer targeting the topic `streaming-04-visualization-critical-section-dlq`. Any message failing `validate_required_fields` is now explicitly produced to this topic before the loop continues.
-- **State Management:** Threaded the new visualization variables (`ma_values`, `region_sales`) through the initialization, processing, and charting functions, and updated the Ruff docstrings (`D417`) to pass stringent pre-commit hooks.
+### Dataset
 
-### What did you observe after your modification?
-When running the consumer, a two-panel interactive Matplotlib window now appears. The top panel plots the live stream with a smoothed red moving average trendline, while the bottom panel's categorical bars grow dynamically as different regions make sales. The terminal successfully indicates when messages are processed, and any simulated invalid messages are explicitly logged as routed to the DLQ topic.
+For the custom application, I used a completely new dataset rather than the original sales data.
+- **File Name:** `events.csv` (accompanied by a reference `players.csv`).
+- **Record Type:** Live NBA play-by-play events from a single match.
+- **Included Fields:** `play_id`, `game_id`, `timestamp`, `player_id`, `action_type`, `shot_type`, `distance_ft`, `is_made`, `quarter`, and `time_remaining`.
 
-### Describe your custom work being specific:
-To accomplish this, I:
-- Integrated `kafka_producer_utils.py` directly into the consumer file to grant it publisher capabilities.
-- Handled Matplotlib's subplot axes by unpacking them `ax1, ax2 = axes`, calling `.clear()` on each during real-time updates, and plotting `.plot()` for the line charts and `.bar()` for the regional distribution.
-- Adjusted `.pre-commit-config.yaml` to exclude the `data/output/` directory from line-ending checks to avoid formatting conflicts with dynamically generated CSV files.
-- Ensured the DLQ producer is cleanly flushed and closed in a nested `try/finally` block alongside the Kafka consumer to prevent memory leaks.
+### Kafka Messages
 
-### How difficult was this initial modification?
-This modification was moderately difficult, as it spanned data engineering, visualization, and system observability domains.
+The Kafka producer simulates a live event feed.
+- **What is Sent:** JSON-encoded dictionaries representing individual play events (e.g., a rebound or a turnover).
+- **Topic:** `streaming-04-nba` (configured to dynamically clear old records on startup to avoid overlapping historic data during tests).
+- **Message Key:** The unique `play_id` for each event.
+- **Field Modification:** Entirely replaced the original sales schema with the custom NBA data contract to enforce strict requirements.
 
-### Was it more or less difficult than you expected and why?
-It was slightly more difficult than expected. The core logic for calculating a moving average or a regional sum is straightforward Python, but integrating it into an existing streaming architecture requires careful state management. Threading the new variables (`ma_values`, `region_sales`) across multiple decoupled functions, managing Matplotlib's interactive `.flush_events()` drawing cycle for subplots, and ensuring the code adhered to strict Ruff docstring linting via `pre-commit` added a layer of professional complexity to the task.
+### Consumer Processing
+
+The consumer receives the raw stream from Kafka and transforms it for the visualization layer.
+- **Reception:** Receives individual JSON events up to a maximum limit of 1000 records.
+- **Data Enrichment:** Correlates the `player_id` against an in-memory dictionary built from `players.csv` to map actions to their respective teams (OKC or SAS).
+- **Filtering:** Actively ignores events that do not belong to the target teams (OKC and SAS) or do not match targeted `action_type` values ("Rebound", "Foul", "Turnover").
+- **Logging & Storage:** Logs the accepted `play_id`, assigned team, and action type to the console while simultaneously appending valid, enriched rows into `data/output/consumed_nba_events.csv`.
+
+### Experiments
+
+Two distinct experiments were conducted to extend the project's capabilities:
+1. **Phase 4 Change (Sales Pipeline):** Introduced a 5-message moving average into the original sales chart to smooth out volatile trends, and added a Dead Letter Queue (DLQ) to explicitly route and save failed data validations into a separate Kafka topic.
+2. **Phase 5 Application (NBA Pipeline):** Built an entirely new sports visualization using clustered column charts. This required state management modifications—such as locking the Y-axis to a fixed max value of 45 to keep the chart scale consistent, and parsing a raw string (`PT11M21.00S`) into a formatted `MM:SS` game clock that ticks actively inside the Matplotlib legend.
+
+### Results
+
+Running the custom NBA producer and consumer successfully simulated an accelerated live game. The producer immediately cleared the topic upon starting, ensuring a fresh data run. As events flowed in at 0.1-second intervals, the consumer mapped players to teams and dynamically raised the blue (OKC) and silver (SAS) bars in the clustered chart. Irrelevant plays were silently bypassed without cluttering the logs, and a PNG image of the final game statistics was successfully saved upon completion.
+
+### Interpretation
+
+Watching the messages stream sequentially through the Kafka architecture revealed several critical insights:
+- **Change from Original:** We transitioned from tracking continuous financial metrics (sales) to categorical, discrete events (sports plays). This shift demonstrated the necessity of joining streams with reference data (`players.csv`) prior to plotting.
+- **Learning from Kafka:** Kafka's behavior of storing topic history proved immediately obvious when testing; rerunning the producer without clearing the topic compounded the game stats. Adding `prepare_producer_topic()` demonstrated how easily infrastructure state can influence analytical outcomes.
+- **Business Value:** A live stream enables organizations to instantly track Key Performance Indicators (KPIs) exactly when they happen. By watching visual representations update dynamically, users are freed from the latency of batch-processing queries.
+- **Business Intelligence:** For a sports franchise or analytics firm, tracking momentum shifts, turnover differentials, or accumulating foul trouble in real time empowers immediate tactical decisions—allowing coaches to pivot strategies mid-quarter rather than reacting to a post-game box score.

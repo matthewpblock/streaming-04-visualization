@@ -22,9 +22,9 @@ We learn by doing.
 
 This project focuses on visualizing streaming data as it is consumed.
 
-The project uses Kafka to move sales messages from a producer to a consumer.
-The consumer reads each message, validates required fields, computes derived values,
-writes processed records to CSV, and updates a live chart.
+The project uses Kafka to move messages from a producer to a consumer, featuring two distinct pipelines:
+1. **Sales Pipeline**: Reads sales messages, validates fields, computes totals, writes to CSV, and updates a live dual-panel chart with a Dead Letter Queue (DLQ) for failed validations.
+2. **NBA Events Pipeline**: Reads live play-by-play events, maps players to teams (OKC and SAS), filters for specific actions (Rebounds, Fouls, Turnovers), and dynamically updates a clustered column chart with a live game clock.
 
 This module adds live visualization to the streaming workflow.
 
@@ -203,9 +203,12 @@ uvx pre-commit run --all-files
 git add -A
 uvx pre-commit run --all-files
 
-# run the producer
+# run the sales producer
 clear
 uv run python -m streaming.kafka_producer_critical_section
+
+# OR run the NBA producer
+# uv run python -m streaming.kafka_producer_nba
 
 
 # do chores
@@ -231,6 +234,9 @@ Clear the terminal, then start the consumer.
 ```shell
 clear
 uv run python -m streaming.kafka_consumer_critical_section
+
+# OR run the NBA consumer
+# uv run python -m streaming.kafka_consumer_nba
 ```
 
 To start fresh, see
