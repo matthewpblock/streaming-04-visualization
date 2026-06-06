@@ -6503,3 +6503,653 @@
 2026-06-05 20:30:20 | INFO | P04_NBA | Sent Event: P0706 | Action: Made Shot
 2026-06-05 20:30:21 | INFO | P04_NBA | Producer flushed and closed.
 2026-06-05 20:30:21 | INFO | C04_NBA | Accepted NBA event: P0705 | Team: SAS | Action: Rebound
+2026-06-05 20:33:10 | INFO | P04_NBA | === RUN START ===
+2026-06-05 20:33:10 | INFO | P04_NBA | project=P04_NBA
+2026-06-05 20:33:10 | INFO | P04_NBA | repo_dir=streaming-04-visualization
+2026-06-05 20:33:10 | INFO | P04_NBA | python=3.14.5
+2026-06-05 20:33:10 | INFO | P04_NBA | os=Windows 11
+2026-06-05 20:33:10 | INFO | P04_NBA | shell=powershell
+2026-06-05 20:33:10 | INFO | P04_NBA | cwd=.
+2026-06-05 20:33:10 | INFO | P04_NBA | github_actions=False
+2026-06-05 20:33:10 | INFO | P04_NBA | Preparing topic: streaming-04-nba
+2026-06-05 20:33:11 | INFO | P04_NBA | Creating producer for topic: streaming-04-nba
+2026-06-05 20:33:11 | INFO | P04_NBA | Reading from C:\Projects\MS_Data_Analytics\Streaming Data\streaming-04-visualization\data\events.csv
+2026-06-05 20:33:11 | INFO | P04_NBA | Sent Event: P0004 | Action: Jump Ball
+2026-06-05 20:33:11 | INFO | P04_NBA | Sent Event: P0007 | Action: Made Shot
+2026-06-05 20:33:11 | INFO | P04_NBA | Sent Event: P0008 | Action: Turnover
+2026-06-05 20:33:11 | INFO | P04_NBA | Sent Event: P0008 | Action: Unknown
+2026-06-05 20:33:11 | INFO | P04_NBA | Sent Event: P0010 | Action: Foul
+2026-06-05 20:33:11 | INFO | P04_NBA | Sent Event: P0013 | Action: Made Shot
+2026-06-05 20:33:11 | INFO | P04_NBA | Sent Event: P0014 | Action: Made Shot
+2026-06-05 20:33:12 | INFO | P04_NBA | Sent Event: P0016 | Action: Made Shot
+2026-06-05 20:33:12 | INFO | P04_NBA | Sent Event: P0018 | Action: Made Shot
+2026-06-05 20:33:12 | INFO | P04_NBA | Sent Event: P0019 | Action: Made Shot
+2026-06-05 20:33:12 | INFO | P04_NBA | Sent Event: P0021 | Action: Missed Shot
+2026-06-05 20:33:12 | INFO | P04_NBA | Sent Event: P0022 | Action: Rebound
+2026-06-05 20:33:12 | INFO | P04_NBA | Sent Event: P0023 | Action: Missed Shot
+2026-06-05 20:33:12 | INFO | P04_NBA | Sent Event: P0024 | Action: Rebound
+2026-06-05 20:33:13 | INFO | P04_NBA | Sent Event: P0026 | Action: Made Shot
+2026-06-05 20:33:13 | INFO | P04_NBA | Sent Event: P0028 | Action: Missed Shot
+2026-06-05 20:33:13 | INFO | P04_NBA | Sent Event: P0029 | Action: Rebound
+2026-06-05 20:33:13 | INFO | P04_NBA | Sent Event: P0030 | Action: Missed Shot
+2026-06-05 20:33:13 | INFO | P04_NBA | Sent Event: P0032 | Action: Rebound
+2026-06-05 20:33:13 | INFO | P04_NBA | Sent Event: P0033 | Action: Turnover
+2026-06-05 20:33:13 | INFO | P04_NBA | Sent Event: P0033 | Action: Unknown
+2026-06-05 20:33:14 | INFO | P04_NBA | Sent Event: P0035 | Action: Foul
+2026-06-05 20:33:14 | INFO | P04_NBA | Sent Event: P0037 | Action: Substitution
+2026-06-05 20:33:14 | INFO | P04_NBA | Sent Event: P0039 | Action: Missed Shot
+2026-06-05 20:33:14 | INFO | P04_NBA | Sent Event: P0040 | Action: Rebound
+2026-06-05 20:33:14 | INFO | P04_NBA | Sent Event: P0041 | Action: Made Shot
+2026-06-05 20:33:14 | INFO | P04_NBA | Sent Event: P0043 | Action: Made Shot
+2026-06-05 20:33:15 | INFO | P04_NBA | Sent Event: P0045 | Action: Turnover
+2026-06-05 20:33:15 | INFO | P04_NBA | Sent Event: P0045 | Action: Unknown
+2026-06-05 20:33:15 | INFO | P04_NBA | Sent Event: P0047 | Action: Missed Shot
+2026-06-05 20:33:15 | INFO | P04_NBA | Sent Event: P0048 | Action: Rebound
+2026-06-05 20:33:15 | INFO | P04_NBA | Sent Event: P0049 | Action: Made Shot
+2026-06-05 20:33:15 | INFO | P04_NBA | Sent Event: P0050 | Action: Made Shot
+2026-06-05 20:33:15 | INFO | P04_NBA | Sent Event: P0052 | Action: Turnover
+2026-06-05 20:33:16 | INFO | P04_NBA | Sent Event: P0052 | Action: Unknown
+2026-06-05 20:33:16 | INFO | P04_NBA | Sent Event: P0054 | Action: Missed Shot
+2026-06-05 20:33:16 | INFO | P04_NBA | Sent Event: P0055 | Action: Rebound
+2026-06-05 20:33:16 | INFO | P04_NBA | Sent Event: P0056 | Action: Made Shot
+2026-06-05 20:33:16 | INFO | P04_NBA | Sent Event: P0057 | Action: Timeout
+2026-06-05 20:33:16 | INFO | C04_NBA | Verifying Kafka connection...
+2026-06-05 20:33:16 | INFO | C04_NBA | Loading players reference data...
+2026-06-05 20:33:16 | INFO | C04_NBA | Initializing NBA live clustered chart...
+2026-06-05 20:33:16 | INFO | P04_NBA | Sent Event: P0058 | Action: Substitution
+2026-06-05 20:33:16 | INFO | P04_NBA | Sent Event: P0059 | Action: Substitution
+2026-06-05 20:33:17 | INFO | P04_NBA | Sent Event: P0060 | Action: Substitution
+2026-06-05 20:33:17 | INFO | C04_NBA | Subscribing to topic: streaming-04-nba
+2026-06-05 20:33:17 | INFO | P04_NBA | Sent Event: P0064 | Action: Missed Shot
+2026-06-05 20:33:17 | INFO | P04_NBA | Sent Event: P0065 | Action: Rebound
+2026-06-05 20:33:17 | INFO | P04_NBA | Sent Event: P0066 | Action: Missed Shot
+2026-06-05 20:33:17 | INFO | P04_NBA | Sent Event: P0067 | Action: Rebound
+2026-06-05 20:33:17 | INFO | P04_NBA | Sent Event: P0068 | Action: Made Shot
+2026-06-05 20:33:17 | INFO | P04_NBA | Sent Event: P0070 | Action: Made Shot
+2026-06-05 20:33:18 | INFO | P04_NBA | Sent Event: P0072 | Action: Made Shot
+2026-06-05 20:33:18 | INFO | P04_NBA | Sent Event: P0073 | Action: Made Shot
+2026-06-05 20:33:18 | INFO | P04_NBA | Sent Event: P0074 | Action: Foul
+2026-06-05 20:33:18 | INFO | P04_NBA | Sent Event: P0076 | Action: Free Throw
+2026-06-05 20:33:18 | INFO | P04_NBA | Sent Event: P0077 | Action: Turnover
+2026-06-05 20:33:18 | INFO | P04_NBA | Sent Event: P0077 | Action: Unknown
+2026-06-05 20:33:18 | INFO | P04_NBA | Sent Event: P0079 | Action: Made Shot
+2026-06-05 20:33:19 | INFO | P04_NBA | Sent Event: P0081 | Action: Made Shot
+2026-06-05 20:33:19 | INFO | P04_NBA | Sent Event: P0082 | Action: Missed Shot
+2026-06-05 20:33:19 | INFO | P04_NBA | Sent Event: P0083 | Action: Rebound
+2026-06-05 20:33:19 | INFO | P04_NBA | Sent Event: P0084 | Action: Made Shot
+2026-06-05 20:33:19 | INFO | P04_NBA | Sent Event: P0086 | Action: Timeout
+2026-06-05 20:33:19 | INFO | P04_NBA | Sent Event: P0088 | Action: Substitution
+2026-06-05 20:33:20 | INFO | P04_NBA | Sent Event: P0089 | Action: Substitution
+2026-06-05 20:33:20 | INFO | P04_NBA | Sent Event: P0090 | Action: Substitution
+2026-06-05 20:33:20 | INFO | P04_NBA | Sent Event: P0091 | Action: Substitution
+2026-06-05 20:33:20 | INFO | P04_NBA | Sent Event: P0096 | Action: Missed Shot
+2026-06-05 20:33:20 | INFO | C04_NBA | Accepted NBA event: P0008 | Team: OKC | Action: Turnover
+2026-06-05 20:33:20 | INFO | P04_NBA | Sent Event: P0097 | Action: Rebound
+2026-06-05 20:33:20 | INFO | P04_NBA | Sent Event: P0098 | Action: Turnover
+2026-06-05 20:33:20 | INFO | C04_NBA | Accepted NBA event: P0010 | Team: OKC | Action: Foul
+2026-06-05 20:33:20 | INFO | P04_NBA | Sent Event: P0098 | Action: Unknown
+2026-06-05 20:33:21 | INFO | C04_NBA | Accepted NBA event: P0022 | Team: OKC | Action: Rebound
+2026-06-05 20:33:21 | INFO | P04_NBA | Sent Event: P0100 | Action: Turnover
+2026-06-05 20:33:21 | INFO | P04_NBA | Sent Event: P0100 | Action: Unknown
+2026-06-05 20:33:21 | INFO | C04_NBA | Accepted NBA event: P0029 | Team: SAS | Action: Rebound
+2026-06-05 20:33:21 | INFO | P04_NBA | Sent Event: P0102 | Action: Foul
+2026-06-05 20:33:21 | INFO | P04_NBA | Sent Event: P0104 | Action: Free Throw
+2026-06-05 20:33:21 | INFO | C04_NBA | Accepted NBA event: P0032 | Team: OKC | Action: Rebound
+2026-06-05 20:33:21 | INFO | P04_NBA | Sent Event: P0105 | Action: Substitution
+2026-06-05 20:33:21 | INFO | C04_NBA | Accepted NBA event: P0033 | Team: OKC | Action: Turnover
+2026-06-05 20:33:21 | INFO | P04_NBA | Sent Event: P0107 | Action: Free Throw
+2026-06-05 20:33:21 | INFO | P04_NBA | Sent Event: P0108 | Action: Missed Shot
+2026-06-05 20:33:22 | INFO | C04_NBA | Accepted NBA event: P0035 | Team: OKC | Action: Foul
+2026-06-05 20:33:22 | INFO | P04_NBA | Sent Event: P0109 | Action: Rebound
+2026-06-05 20:33:22 | INFO | P04_NBA | Sent Event: P0110 | Action: Missed Shot
+2026-06-05 20:33:22 | INFO | C04_NBA | Accepted NBA event: P0040 | Team: OKC | Action: Rebound
+2026-06-05 20:33:22 | INFO | P04_NBA | Sent Event: P0111 | Action: Rebound
+2026-06-05 20:33:22 | INFO | P04_NBA | Sent Event: P0112 | Action: Missed Shot
+2026-06-05 20:33:22 | INFO | C04_NBA | Accepted NBA event: P0045 | Team: OKC | Action: Turnover
+2026-06-05 20:33:22 | INFO | P04_NBA | Sent Event: P0113 | Action: Rebound
+2026-06-05 20:33:22 | INFO | P04_NBA | Sent Event: P0114 | Action: Missed Shot
+2026-06-05 20:33:22 | INFO | C04_NBA | Accepted NBA event: P0048 | Team: OKC | Action: Rebound
+2026-06-05 20:33:22 | INFO | P04_NBA | Sent Event: P0115 | Action: Rebound
+2026-06-05 20:33:23 | INFO | P04_NBA | Sent Event: P0116 | Action: Missed Shot
+2026-06-05 20:33:23 | INFO | C04_NBA | Accepted NBA event: P0052 | Team: OKC | Action: Turnover
+2026-06-05 20:33:23 | INFO | P04_NBA | Sent Event: P0117 | Action: Rebound
+2026-06-05 20:33:23 | INFO | C04_NBA | Accepted NBA event: P0055 | Team: SAS | Action: Rebound
+2026-06-05 20:33:23 | INFO | P04_NBA | Sent Event: P0118 | Action: Foul
+2026-06-05 20:33:23 | INFO | P04_NBA | Sent Event: P0120 | Action: Substitution
+2026-06-05 20:33:23 | INFO | C04_NBA | Accepted NBA event: P0065 | Team: OKC | Action: Rebound
+2026-06-05 20:33:23 | INFO | P04_NBA | Sent Event: P0122 | Action: Missed Shot
+2026-06-05 20:33:23 | INFO | P04_NBA | Sent Event: P0123 | Action: Rebound
+2026-06-05 20:33:23 | INFO | C04_NBA | Accepted NBA event: P0067 | Team: OKC | Action: Rebound
+2026-06-05 20:33:23 | INFO | P04_NBA | Sent Event: P0124 | Action: Made Shot
+2026-06-05 20:33:24 | INFO | P04_NBA | Sent Event: P0125 | Action: Missed Shot
+2026-06-05 20:33:24 | INFO | C04_NBA | Accepted NBA event: P0074 | Team: OKC | Action: Foul
+2026-06-05 20:33:24 | INFO | P04_NBA | Sent Event: P0126 | Action: Rebound
+2026-06-05 20:33:24 | INFO | P04_NBA | Sent Event: P0127 | Action: Foul
+2026-06-05 20:33:24 | INFO | C04_NBA | Accepted NBA event: P0077 | Team: OKC | Action: Turnover
+2026-06-05 20:33:24 | INFO | P04_NBA | Sent Event: P0129 | Action: Free Throw
+2026-06-05 20:33:24 | INFO | C04_NBA | Accepted NBA event: P0083 | Team: OKC | Action: Rebound
+2026-06-05 20:33:24 | INFO | P04_NBA | Sent Event: P0130 | Action: Substitution
+2026-06-05 20:33:24 | INFO | P04_NBA | Sent Event: P0132 | Action: Free Throw
+2026-06-05 20:33:24 | INFO | C04_NBA | Accepted NBA event: P0097 | Team: OKC | Action: Rebound
+2026-06-05 20:33:24 | INFO | P04_NBA | Sent Event: P0133 | Action: Missed Shot
+2026-06-05 20:33:25 | INFO | P04_NBA | Sent Event: P0134 | Action: Rebound
+2026-06-05 20:33:25 | INFO | C04_NBA | Accepted NBA event: P0098 | Team: OKC | Action: Turnover
+2026-06-05 20:33:25 | INFO | P04_NBA | Sent Event: P0135 | Action: Turnover
+2026-06-05 20:33:25 | INFO | C04_NBA | Accepted NBA event: P0100 | Team: SAS | Action: Turnover
+2026-06-05 20:33:25 | INFO | P04_NBA | Sent Event: P0136 | Action: Substitution
+2026-06-05 20:33:25 | INFO | P04_NBA | Sent Event: P0137 | Action: Substitution
+2026-06-05 20:33:25 | INFO | C04_NBA | Accepted NBA event: P0102 | Team: SAS | Action: Foul
+2026-06-05 20:33:25 | INFO | P04_NBA | Sent Event: P0138 | Action: Substitution
+2026-06-05 20:33:25 | INFO | P04_NBA | Sent Event: P0142 | Action: Missed Shot
+2026-06-05 20:33:25 | INFO | C04_NBA | Accepted NBA event: P0109 | Team: OKC | Action: Rebound
+2026-06-05 20:33:26 | INFO | P04_NBA | Sent Event: P0143 | Action: Rebound
+2026-06-05 20:33:26 | INFO | P04_NBA | Sent Event: P0144 | Action: Made Shot
+2026-06-05 20:33:26 | INFO | C04_NBA | Accepted NBA event: P0111 | Team: OKC | Action: Rebound
+2026-06-05 20:33:26 | INFO | P04_NBA | Sent Event: P0145 | Action: Foul
+2026-06-05 20:33:26 | INFO | C04_NBA | Accepted NBA event: P0113 | Team: SAS | Action: Rebound
+2026-06-05 20:33:26 | INFO | P04_NBA | Sent Event: P0150 | Action: Turnover
+2026-06-05 20:33:26 | INFO | P04_NBA | Sent Event: P0147 | Action: Timeout
+2026-06-05 20:33:26 | INFO | C04_NBA | Accepted NBA event: P0115 | Team: OKC | Action: Rebound
+2026-06-05 20:33:26 | INFO | P04_NBA | Sent Event: P0148 | Action: Foul
+2026-06-05 20:33:26 | INFO | P04_NBA | Sent Event: P0149 | Action: Instant Replay
+2026-06-05 20:33:26 | INFO | C04_NBA | Accepted NBA event: P0117 | Team: OKC | Action: Rebound
+2026-06-05 20:33:27 | INFO | P04_NBA | Sent Event: P0151 | Action: Substitution
+2026-06-05 20:33:27 | INFO | C04_NBA | Accepted NBA event: P0118 | Team: SAS | Action: Foul
+2026-06-05 20:33:27 | INFO | P04_NBA | Sent Event: P0153 | Action: Free Throw
+2026-06-05 20:33:27 | INFO | P04_NBA | Sent Event: P0154 | Action: Missed Shot
+2026-06-05 20:33:27 | INFO | C04_NBA | Accepted NBA event: P0123 | Team: SAS | Action: Rebound
+2026-06-05 20:33:27 | INFO | P04_NBA | Sent Event: P0155 | Action: Rebound
+2026-06-05 20:33:27 | INFO | C04_NBA | Accepted NBA event: P0126 | Team: SAS | Action: Rebound
+2026-06-05 20:33:27 | INFO | P04_NBA | Sent Event: P0156 | Action: Foul
+2026-06-05 20:33:27 | INFO | P04_NBA | Sent Event: P0158 | Action: Made Shot
+2026-06-05 20:33:27 | INFO | C04_NBA | Accepted NBA event: P0127 | Team: OKC | Action: Foul
+2026-06-05 20:33:27 | INFO | P04_NBA | Sent Event: P0160 | Action: Missed Shot
+2026-06-05 20:33:28 | INFO | P04_NBA | Sent Event: P0161 | Action: Rebound
+2026-06-05 20:33:28 | INFO | C04_NBA | Accepted NBA event: P0134 | Team: SAS | Action: Rebound
+2026-06-05 20:33:28 | INFO | P04_NBA | Sent Event: P0163 | Action: Rebound
+2026-06-05 20:33:28 | INFO | C04_NBA | Accepted NBA event: P0135 | Team: SAS | Action: Turnover
+2026-06-05 20:33:28 | INFO | P04_NBA | Sent Event: P0170 | Action: Made Shot
+2026-06-05 20:33:28 | INFO | P04_NBA | Sent Event: P0172 | Action: Made Shot
+2026-06-05 20:33:28 | INFO | C04_NBA | Accepted NBA event: P0143 | Team: OKC | Action: Rebound
+2026-06-05 20:33:28 | INFO | P04_NBA | Sent Event: P0174 | Action: Missed Shot
+2026-06-05 20:33:28 | INFO | C04_NBA | Accepted NBA event: P0145 | Team: SAS | Action: Foul
+2026-06-05 20:33:28 | INFO | P04_NBA | Sent Event: P0175 | Action: Rebound
+2026-06-05 20:33:28 | INFO | P04_NBA | Sent Event: P0176 | Action: Foul
+2026-06-05 20:33:28 | INFO | C04_NBA | Accepted NBA event: P0150 | Team: SAS | Action: Turnover
+2026-06-05 20:33:29 | INFO | P04_NBA | Sent Event: P0178 | Action: Substitution
+2026-06-05 20:33:29 | INFO | C04_NBA | Accepted NBA event: P0156 | Team: SAS | Action: Foul
+2026-06-05 20:33:29 | INFO | P04_NBA | Sent Event: P0180 | Action: Missed Shot
+2026-06-05 20:33:29 | INFO | P04_NBA | Sent Event: P0181 | Action: Rebound
+2026-06-05 20:33:29 | INFO | C04_NBA | Accepted NBA event: P0161 | Team: OKC | Action: Rebound
+2026-06-05 20:33:29 | INFO | P04_NBA | Sent Event: P0182 | Action: Missed Shot
+2026-06-05 20:33:29 | INFO | C04_NBA | Accepted NBA event: P0176 | Team: OKC | Action: Foul
+2026-06-05 20:33:29 | INFO | P04_NBA | Sent Event: P0183 | Action: Rebound
+2026-06-05 20:33:29 | INFO | P04_NBA | Sent Event: P0184 | Action: Foul
+2026-06-05 20:33:29 | INFO | C04_NBA | Accepted NBA event: P0181 | Team: OKC | Action: Rebound
+2026-06-05 20:33:29 | INFO | P04_NBA | Sent Event: P0186 | Action: Made Shot
+2026-06-05 20:33:30 | INFO | P04_NBA | Sent Event: P0188 | Action: Missed Shot
+2026-06-05 20:33:30 | INFO | C04_NBA | Accepted NBA event: P0184 | Team: SAS | Action: Foul
+2026-06-05 20:33:30 | INFO | P04_NBA | Sent Event: P0189 | Action: Rebound
+2026-06-05 20:33:30 | INFO | P04_NBA | Sent Event: P0190 | Action: Foul
+2026-06-05 20:33:30 | INFO | P04_NBA | Sent Event: P0193 | Action: Substitution
+2026-06-05 20:33:30 | INFO | C04_NBA | Accepted NBA event: P0190 | Team: SAS | Action: Foul
+2026-06-05 20:33:30 | INFO | P04_NBA | Sent Event: P0194 | Action: Substitution
+2026-06-05 20:33:30 | INFO | P04_NBA | Sent Event: P0197 | Action: Made Shot
+2026-06-05 20:33:30 | INFO | P04_NBA | Sent Event: P0198 | Action: Made Shot
+2026-06-05 20:33:31 | INFO | P04_NBA | Sent Event: P0199 | Action: Missed Shot
+2026-06-05 20:33:31 | INFO | P04_NBA | Sent Event: P0200 | Action: Rebound
+2026-06-05 20:33:31 | INFO | P04_NBA | Sent Event: P0201 | Action: Made Shot
+2026-06-05 20:33:31 | INFO | C04_NBA | Accepted NBA event: P0200 | Team: SAS | Action: Rebound
+2026-06-05 20:33:31 | INFO | P04_NBA | Sent Event: P0203 | Action: Timeout
+2026-06-05 20:33:31 | INFO | P04_NBA | Sent Event: P0204 | Action: Substitution
+2026-06-05 20:33:31 | INFO | P04_NBA | Sent Event: P0205 | Action: Substitution
+2026-06-05 20:33:32 | INFO | P04_NBA | Sent Event: P0208 | Action: Missed Shot
+2026-06-05 20:33:32 | INFO | P04_NBA | Sent Event: P0209 | Action: Rebound
+2026-06-05 20:33:32 | INFO | P04_NBA | Sent Event: P0210 | Action: Made Shot
+2026-06-05 20:33:32 | INFO | C04_NBA | Accepted NBA event: P0209 | Team: OKC | Action: Rebound
+2026-06-05 20:33:32 | INFO | P04_NBA | Sent Event: P0211 | Action: Missed Shot
+2026-06-05 20:33:32 | INFO | P04_NBA | Sent Event: P0212 | Action: Rebound
+2026-06-05 20:33:32 | INFO | P04_NBA | Sent Event: P0213 | Action: Missed Shot
+2026-06-05 20:33:32 | INFO | P04_NBA | Sent Event: P0214 | Action: Rebound
+2026-06-05 20:33:32 | INFO | C04_NBA | Accepted NBA event: P0212 | Team: OKC | Action: Rebound
+2026-06-05 20:33:33 | INFO | P04_NBA | Sent Event: P0216 | Action: Substitution
+2026-06-05 20:33:33 | INFO | P04_NBA | Sent Event: P0217 | Action: Substitution
+2026-06-05 20:33:33 | INFO | P04_NBA | Sent Event: P0220 | Action: Missed Shot
+2026-06-05 20:33:33 | INFO | P04_NBA | Sent Event: P0220 | Action: Unknown
+2026-06-05 20:33:33 | INFO | P04_NBA | Sent Event: P0222 | Action: Rebound
+2026-06-05 20:33:33 | INFO | P04_NBA | Sent Event: P0223 | Action: Missed Shot
+2026-06-05 20:33:33 | INFO | C04_NBA | Accepted NBA event: P0222 | Team: OKC | Action: Rebound
+2026-06-05 20:33:33 | INFO | P04_NBA | Sent Event: P0224 | Action: Rebound
+2026-06-05 20:33:34 | INFO | P04_NBA | Sent Event: P0225 | Action: Made Shot
+2026-06-05 20:33:34 | INFO | P04_NBA | Sent Event: P0227 | Action: Foul
+2026-06-05 20:33:34 | INFO | C04_NBA | Accepted NBA event: P0224 | Team: SAS | Action: Rebound
+2026-06-05 20:33:34 | INFO | P04_NBA | Sent Event: P0229 | Action: Free Throw
+2026-06-05 20:33:34 | INFO | C04_NBA | Accepted NBA event: P0227 | Team: SAS | Action: Foul
+2026-06-05 20:33:34 | INFO | P04_NBA | Sent Event: P0230 | Action: Rebound
+2026-06-05 20:33:34 | INFO | P04_NBA | Sent Event: P0231 | Action: Substitution
+2026-06-05 20:33:34 | INFO | P04_NBA | Sent Event: P0232 | Action: Substitution
+2026-06-05 20:33:34 | INFO | P04_NBA | Sent Event: P0235 | Action: Free Throw
+2026-06-05 20:33:35 | INFO | P04_NBA | Sent Event: P0236 | Action: Rebound
+2026-06-05 20:33:35 | INFO | P04_NBA | Sent Event: P0237 | Action: Foul
+2026-06-05 20:33:35 | INFO | C04_NBA | Accepted NBA event: P0236 | Team: SAS | Action: Rebound
+2026-06-05 20:33:35 | INFO | P04_NBA | Sent Event: P0239 | Action: Free Throw
+2026-06-05 20:33:35 | INFO | P04_NBA | Sent Event: P0240 | Action: Free Throw
+2026-06-05 20:33:35 | INFO | C04_NBA | Accepted NBA event: P0237 | Team: OKC | Action: Foul
+2026-06-05 20:33:35 | INFO | P04_NBA | Sent Event: P0241 | Action: Made Shot
+2026-06-05 20:33:35 | INFO | P04_NBA | Sent Event: P0243 | Action: Timeout
+2026-06-05 20:33:35 | INFO | P04_NBA | Sent Event: P0244 | Action: Substitution
+2026-06-05 20:33:36 | INFO | P04_NBA | Sent Event: P0245 | Action: Substitution
+2026-06-05 20:33:36 | INFO | P04_NBA | Sent Event: P0248 | Action: Missed Shot
+2026-06-05 20:33:36 | INFO | P04_NBA | Sent Event: P0249 | Action: Rebound
+2026-06-05 20:33:36 | INFO | P04_NBA | Sent Event: P0250 | Action: Missed Shot
+2026-06-05 20:33:36 | INFO | P04_NBA | Sent Event: P0251 | Action: Rebound
+2026-06-05 20:33:36 | INFO | C04_NBA | Accepted NBA event: P0249 | Team: OKC | Action: Rebound
+2026-06-05 20:33:36 | INFO | P04_NBA | Sent Event: P0254 | Action: Missed Shot
+2026-06-05 20:33:37 | INFO | P04_NBA | Sent Event: P0255 | Action: Rebound
+2026-06-05 20:33:37 | INFO | P04_NBA | Sent Event: P0256 | Action: Made Shot
+2026-06-05 20:33:37 | INFO | C04_NBA | Accepted NBA event: P0255 | Team: OKC | Action: Rebound
+2026-06-05 20:33:37 | INFO | P04_NBA | Sent Event: P0258 | Action: Missed Shot
+2026-06-05 20:33:37 | INFO | P04_NBA | Sent Event: P0259 | Action: Rebound
+2026-06-05 20:33:37 | INFO | P04_NBA | Sent Event: P0261 | Action: Foul
+2026-06-05 20:33:37 | INFO | C04_NBA | Accepted NBA event: P0259 | Team: OKC | Action: Rebound
+2026-06-05 20:33:37 | INFO | P04_NBA | Sent Event: P0263 | Action: Free Throw
+2026-06-05 20:33:37 | INFO | P04_NBA | Sent Event: P0264 | Action: Rebound
+2026-06-05 20:33:37 | INFO | C04_NBA | Accepted NBA event: P0261 | Team: SAS | Action: Foul
+2026-06-05 20:33:38 | INFO | P04_NBA | Sent Event: P0265 | Action: Substitution
+2026-06-05 20:33:38 | INFO | P04_NBA | Sent Event: P0267 | Action: Free Throw
+2026-06-05 20:33:38 | INFO | P04_NBA | Sent Event: P0268 | Action: Rebound
+2026-06-05 20:33:38 | INFO | P04_NBA | Sent Event: P0269 | Action: Foul
+2026-06-05 20:33:38 | INFO | P04_NBA | Sent Event: P0271 | Action: Substitution
+2026-06-05 20:33:38 | INFO | C04_NBA | Accepted NBA event: P0268 | Team: SAS | Action: Rebound
+2026-06-05 20:33:38 | INFO | P04_NBA | Sent Event: P0273 | Action: Missed Shot
+2026-06-05 20:33:38 | INFO | C04_NBA | Accepted NBA event: P0269 | Team: OKC | Action: Foul
+2026-06-05 20:33:38 | INFO | P04_NBA | Sent Event: P0274 | Action: Rebound
+2026-06-05 20:33:39 | INFO | P04_NBA | Sent Event: P0276 | Action: Made Shot
+2026-06-05 20:33:39 | INFO | P04_NBA | Sent Event: P0277 | Action: Missed Shot
+2026-06-05 20:33:39 | INFO | P04_NBA | Sent Event: P0278 | Action: Rebound
+2026-06-05 20:33:39 | INFO | P04_NBA | Sent Event: P0279 | Action: Made Shot
+2026-06-05 20:33:39 | INFO | C04_NBA | Accepted NBA event: P0278 | Team: SAS | Action: Rebound
+2026-06-05 20:33:39 | INFO | P04_NBA | Sent Event: P0280 | Action: Made Shot
+2026-06-05 20:33:39 | INFO | P04_NBA | Sent Event: P0282 | Action: Missed Shot
+2026-06-05 20:33:39 | INFO | P04_NBA | Sent Event: P0283 | Action: Rebound
+2026-06-05 20:33:40 | INFO | P04_NBA | Sent Event: P0284 | Action: Missed Shot
+2026-06-05 20:33:40 | INFO | P04_NBA | Sent Event: P0285 | Action: Rebound
+2026-06-05 20:33:40 | INFO | C04_NBA | Accepted NBA event: P0283 | Team: SAS | Action: Rebound
+2026-06-05 20:33:40 | INFO | P04_NBA | Sent Event: P0286 | Action: Made Shot
+2026-06-05 20:33:40 | INFO | C04_NBA | Accepted NBA event: P0285 | Team: OKC | Action: Rebound
+2026-06-05 20:33:40 | INFO | P04_NBA | Sent Event: P0288 | Action: Missed Shot
+2026-06-05 20:33:40 | INFO | P04_NBA | Sent Event: P0289 | Action: Rebound
+2026-06-05 20:33:40 | INFO | P04_NBA | Sent Event: P0290 | Action: Turnover
+2026-06-05 20:33:40 | INFO | C04_NBA | Accepted NBA event: P0289 | Team: OKC | Action: Rebound
+2026-06-05 20:33:41 | INFO | P04_NBA | Sent Event: P0290 | Action: Unknown
+2026-06-05 20:33:41 | INFO | P04_NBA | Sent Event: P0292 | Action: Foul
+2026-06-05 20:33:41 | INFO | C04_NBA | Accepted NBA event: P0290 | Team: OKC | Action: Turnover
+2026-06-05 20:33:41 | INFO | P04_NBA | Sent Event: P0294 | Action: Instant Replay
+2026-06-05 20:33:41 | INFO | C04_NBA | Accepted NBA event: P0292 | Team: OKC | Action: Foul
+2026-06-05 20:33:41 | INFO | P04_NBA | Sent Event: P0295 | Action: Substitution
+2026-06-05 20:33:41 | INFO | P04_NBA | Sent Event: P0297 | Action: Free Throw
+2026-06-05 20:33:41 | INFO | P04_NBA | Sent Event: P0298 | Action: Substitution
+2026-06-05 20:33:41 | INFO | P04_NBA | Sent Event: P0300 | Action: Free Throw
+2026-06-05 20:33:42 | INFO | P04_NBA | Sent Event: P0301 | Action: Rebound
+2026-06-05 20:33:42 | INFO | P04_NBA | Sent Event: P0302 | Action: Made Shot
+2026-06-05 20:33:42 | INFO | P04_NBA | Sent Event: P0304 | Action: Made Shot
+2026-06-05 20:33:42 | INFO | C04_NBA | Accepted NBA event: P0301 | Team: OKC | Action: Rebound
+2026-06-05 20:33:42 | INFO | P04_NBA | Sent Event: P0305 | Action: Missed Shot
+2026-06-05 20:33:42 | INFO | P04_NBA | Sent Event: P0306 | Action: Rebound
+2026-06-05 20:33:42 | INFO | P04_NBA | Sent Event: P0307 | Action: Made Shot
+2026-06-05 20:33:42 | INFO | C04_NBA | Accepted NBA event: P0306 | Team: OKC | Action: Rebound
+2026-06-05 20:33:42 | INFO | P04_NBA | Sent Event: P0309 | Action: Missed Shot
+2026-06-05 20:33:43 | INFO | P04_NBA | Sent Event: P0310 | Action: Rebound
+2026-06-05 20:33:43 | INFO | P04_NBA | Sent Event: P0311 | Action: Made Shot
+2026-06-05 20:33:43 | INFO | C04_NBA | Accepted NBA event: P0310 | Team: OKC | Action: Rebound
+2026-06-05 20:33:43 | INFO | P04_NBA | Sent Event: P0313 | Action: Turnover
+2026-06-05 20:33:43 | INFO | P04_NBA | Sent Event: P0313 | Action: Unknown
+2026-06-05 20:33:43 | INFO | C04_NBA | Accepted NBA event: P0313 | Team: SAS | Action: Turnover
+2026-06-05 20:33:43 | INFO | P04_NBA | Sent Event: P0315 | Action: Foul
+2026-06-05 20:33:43 | INFO | P04_NBA | Sent Event: P0317 | Action: Free Throw
+2026-06-05 20:33:43 | INFO | C04_NBA | Accepted NBA event: P0315 | Team: SAS | Action: Foul
+2026-06-05 20:33:43 | INFO | P04_NBA | Sent Event: P0318 | Action: Free Throw
+2026-06-05 20:33:44 | INFO | P04_NBA | Sent Event: P0321 | Action: Made Shot
+2026-06-05 20:33:44 | INFO | P04_NBA | Sent Event: P0323 | Action: Turnover
+2026-06-05 20:33:44 | INFO | P04_NBA | Sent Event: P0323 | Action: Unknown
+2026-06-05 20:33:44 | INFO | C04_NBA | Accepted NBA event: P0323 | Team: OKC | Action: Turnover
+2026-06-05 20:33:44 | INFO | P04_NBA | Sent Event: P0325 | Action: Missed Shot
+2026-06-05 20:33:44 | INFO | P04_NBA | Sent Event: P0325 | Action: Unknown
+2026-06-05 20:33:44 | INFO | P04_NBA | Sent Event: P0327 | Action: Rebound
+2026-06-05 20:33:44 | INFO | P04_NBA | Sent Event: P0328 | Action: Made Shot
+2026-06-05 20:33:45 | INFO | P04_NBA | Sent Event: P0329 | Action: Missed Shot
+2026-06-05 20:33:45 | INFO | C04_NBA | Accepted NBA event: P0327 | Team: SAS | Action: Rebound
+2026-06-05 20:33:45 | INFO | P04_NBA | Sent Event: P0330 | Action: Rebound
+2026-06-05 20:33:45 | INFO | P04_NBA | Sent Event: P0331 | Action: Made Shot
+2026-06-05 20:33:45 | INFO | C04_NBA | Accepted NBA event: P0330 | Team: SAS | Action: Rebound
+2026-06-05 20:33:45 | INFO | P04_NBA | Sent Event: P0333 | Action: Missed Shot
+2026-06-05 20:33:45 | INFO | P04_NBA | Sent Event: P0334 | Action: Rebound
+2026-06-05 20:33:45 | INFO | P04_NBA | Sent Event: P0341 | Action: Missed Shot
+2026-06-05 20:33:46 | INFO | P04_NBA | Sent Event: P0342 | Action: Rebound
+2026-06-05 20:33:46 | INFO | P04_NBA | Sent Event: P0343 | Action: Missed Shot
+2026-06-05 20:33:46 | INFO | P04_NBA | Sent Event: P0344 | Action: Rebound
+2026-06-05 20:33:46 | INFO | C04_NBA | Accepted NBA event: P0342 | Team: SAS | Action: Rebound
+2026-06-05 20:33:46 | INFO | P04_NBA | Sent Event: P0345 | Action: Missed Shot
+2026-06-05 20:33:46 | INFO | C04_NBA | Accepted NBA event: P0344 | Team: OKC | Action: Rebound
+2026-06-05 20:33:46 | INFO | P04_NBA | Sent Event: P0346 | Action: Rebound
+2026-06-05 20:33:46 | INFO | P04_NBA | Sent Event: P0348 | Action: Made Shot
+2026-06-05 20:33:46 | INFO | C04_NBA | Accepted NBA event: P0346 | Team: SAS | Action: Rebound
+2026-06-05 20:33:46 | INFO | P04_NBA | Sent Event: P0350 | Action: Made Shot
+2026-06-05 20:33:47 | INFO | P04_NBA | Sent Event: P0352 | Action: Made Shot
+2026-06-05 20:33:47 | INFO | P04_NBA | Sent Event: P0354 | Action: Missed Shot
+2026-06-05 20:33:47 | INFO | P04_NBA | Sent Event: P0354 | Action: Unknown
+2026-06-05 20:33:47 | INFO | P04_NBA | Sent Event: P0356 | Action: Rebound
+2026-06-05 20:33:47 | INFO | P04_NBA | Sent Event: P0358 | Action: Made Shot
+2026-06-05 20:33:47 | INFO | P04_NBA | Sent Event: P0359 | Action: Missed Shot
+2026-06-05 20:33:47 | INFO | P04_NBA | Sent Event: P0360 | Action: Rebound
+2026-06-05 20:33:48 | INFO | P04_NBA | Sent Event: P0362 | Action: Made Shot
+2026-06-05 20:33:48 | INFO | P04_NBA | Sent Event: P0364 | Action: Missed Shot
+2026-06-05 20:33:48 | INFO | P04_NBA | Sent Event: P0364 | Action: Unknown
+2026-06-05 20:33:48 | INFO | P04_NBA | Sent Event: P0366 | Action: Rebound
+2026-06-05 20:33:48 | INFO | P04_NBA | Sent Event: P0368 | Action: Foul
+2026-06-05 20:33:48 | INFO | P04_NBA | Sent Event: P0370 | Action: Free Throw
+2026-06-05 20:33:49 | INFO | C04_NBA | Accepted NBA event: P0368 | Team: SAS | Action: Foul
+2026-06-05 20:33:49 | INFO | P04_NBA | Sent Event: P0371 | Action: Substitution
+2026-06-05 20:33:49 | INFO | P04_NBA | Sent Event: P0372 | Action: Substitution
+2026-06-05 20:33:49 | INFO | P04_NBA | Sent Event: P0373 | Action: Substitution
+2026-06-05 20:33:49 | INFO | P04_NBA | Sent Event: P0377 | Action: Free Throw
+2026-06-05 20:33:49 | INFO | P04_NBA | Sent Event: P0378 | Action: Made Shot
+2026-06-05 20:33:49 | INFO | P04_NBA | Sent Event: P0380 | Action: Turnover
+2026-06-05 20:33:49 | INFO | P04_NBA | Sent Event: P0380 | Action: Unknown
+2026-06-05 20:33:50 | INFO | C04_NBA | Accepted NBA event: P0380 | Team: OKC | Action: Turnover
+2026-06-05 20:33:50 | INFO | P04_NBA | Sent Event: P0382 | Action: Turnover
+2026-06-05 20:33:50 | INFO | P04_NBA | Sent Event: P0382 | Action: Unknown
+2026-06-05 20:33:50 | INFO | C04_NBA | Accepted NBA event: P0382 | Team: SAS | Action: Turnover
+2026-06-05 20:33:50 | INFO | P04_NBA | Sent Event: P0384 | Action: Timeout
+2026-06-05 20:33:50 | INFO | P04_NBA | Sent Event: P0386 | Action: Violation
+2026-06-05 20:33:50 | INFO | P04_NBA | Sent Event: P0387 | Action: Missed Shot
+2026-06-05 20:33:50 | INFO | P04_NBA | Sent Event: P0388 | Action: Rebound
+2026-06-05 20:33:50 | INFO | P04_NBA | Sent Event: P0389 | Action: Foul
+2026-06-05 20:33:51 | INFO | C04_NBA | Accepted NBA event: P0388 | Team: SAS | Action: Rebound
+2026-06-05 20:33:51 | INFO | P04_NBA | Sent Event: P0391 | Action: Free Throw
+2026-06-05 20:33:51 | INFO | P04_NBA | Sent Event: P0392 | Action: Free Throw
+2026-06-05 20:33:51 | INFO | C04_NBA | Accepted NBA event: P0389 | Team: OKC | Action: Foul
+2026-06-05 20:33:51 | INFO | P04_NBA | Sent Event: P0393 | Action: Rebound
+2026-06-05 20:33:51 | INFO | P04_NBA | Sent Event: P0394 | Action: Free Throw
+2026-06-05 20:33:51 | INFO | P04_NBA | Sent Event: P0395 | Action: Foul
+2026-06-05 20:33:51 | INFO | P04_NBA | Sent Event: P0397 | Action: Turnover
+2026-06-05 20:33:51 | INFO | P04_NBA | Sent Event: P0398 | Action: Substitution
+2026-06-05 20:33:51 | INFO | C04_NBA | Accepted NBA event: P0395 | Team: OKC | Action: Foul
+2026-06-05 20:33:52 | INFO | P04_NBA | Sent Event: P0399 | Action: Substitution
+2026-06-05 20:33:52 | INFO | C04_NBA | Accepted NBA event: P0397 | Team: OKC | Action: Turnover
+2026-06-05 20:33:52 | INFO | P04_NBA | Sent Event: P0400 | Action: Substitution
+2026-06-05 20:33:52 | INFO | P04_NBA | Sent Event: P0404 | Action: Made Shot
+2026-06-05 20:33:52 | INFO | P04_NBA | Sent Event: P0406 | Action: Made Shot
+2026-06-05 20:33:52 | INFO | P04_NBA | Sent Event: P0408 | Action: Missed Shot
+2026-06-05 20:33:52 | INFO | P04_NBA | Sent Event: P0409 | Action: Rebound
+2026-06-05 20:33:52 | INFO | P04_NBA | Sent Event: P0410 | Action: Made Shot
+2026-06-05 20:33:53 | INFO | C04_NBA | Accepted NBA event: P0409 | Team: SAS | Action: Rebound
+2026-06-05 20:33:53 | INFO | P04_NBA | Sent Event: P0412 | Action: Missed Shot
+2026-06-05 20:33:53 | INFO | P04_NBA | Sent Event: P0413 | Action: Rebound
+2026-06-05 20:33:53 | INFO | P04_NBA | Sent Event: P0414 | Action: Missed Shot
+2026-06-05 20:33:53 | INFO | C04_NBA | Accepted NBA event: P0413 | Team: OKC | Action: Rebound
+2026-06-05 20:33:53 | INFO | P04_NBA | Sent Event: P0415 | Action: Rebound
+2026-06-05 20:33:53 | INFO | P04_NBA | Sent Event: P0416 | Action: Made Shot
+2026-06-05 20:33:53 | INFO | C04_NBA | Accepted NBA event: P0415 | Team: SAS | Action: Rebound
+2026-06-05 20:33:53 | INFO | P04_NBA | Sent Event: P0418 | Action: Timeout
+2026-06-05 20:33:54 | INFO | P04_NBA | Sent Event: P0419 | Action: Substitution
+2026-06-05 20:33:54 | INFO | P04_NBA | Sent Event: P0420 | Action: Substitution
+2026-06-05 20:33:54 | INFO | P04_NBA | Sent Event: P0423 | Action: Turnover
+2026-06-05 20:33:54 | INFO | P04_NBA | Sent Event: P0424 | Action: Substitution
+2026-06-05 20:33:54 | INFO | C04_NBA | Accepted NBA event: P0423 | Team: OKC | Action: Turnover
+2026-06-05 20:33:54 | INFO | P04_NBA | Sent Event: P0426 | Action: Foul
+2026-06-05 20:33:54 | INFO | P04_NBA | Sent Event: P0428 | Action: Foul
+2026-06-05 20:33:54 | INFO | C04_NBA | Accepted NBA event: P0426 | Team: OKC | Action: Foul
+2026-06-05 20:33:54 | INFO | P04_NBA | Sent Event: P0430 | Action: Turnover
+2026-06-05 20:33:55 | INFO | P04_NBA | Sent Event: P0431 | Action: Missed Shot
+2026-06-05 20:33:55 | INFO | C04_NBA | Accepted NBA event: P0428 | Team: SAS | Action: Foul
+2026-06-05 20:33:55 | INFO | P04_NBA | Sent Event: P0432 | Action: Rebound
+2026-06-05 20:33:55 | INFO | C04_NBA | Accepted NBA event: P0430 | Team: SAS | Action: Turnover
+2026-06-05 20:33:55 | INFO | P04_NBA | Sent Event: P0433 | Action: Made Shot
+2026-06-05 20:33:55 | INFO | P04_NBA | Sent Event: P0435 | Action: Missed Shot
+2026-06-05 20:33:55 | INFO | C04_NBA | Accepted NBA event: P0432 | Team: SAS | Action: Rebound
+2026-06-05 20:33:55 | INFO | P04_NBA | Sent Event: P0436 | Action: Rebound
+2026-06-05 20:33:55 | INFO | P04_NBA | Sent Event: P0438 | Action: Missed Shot
+2026-06-05 20:33:55 | INFO | P04_NBA | Sent Event: P0439 | Action: Rebound
+2026-06-05 20:33:56 | INFO | P04_NBA | Sent Event: P0440 | Action: Foul
+2026-06-05 20:33:56 | INFO | C04_NBA | Accepted NBA event: P0439 | Team: OKC | Action: Rebound
+2026-06-05 20:33:56 | INFO | P04_NBA | Sent Event: P0442 | Action: Free Throw
+2026-06-05 20:33:56 | INFO | P04_NBA | Sent Event: P0443 | Action: Substitution
+2026-06-05 20:33:56 | INFO | C04_NBA | Accepted NBA event: P0440 | Team: SAS | Action: Foul
+2026-06-05 20:33:56 | INFO | P04_NBA | Sent Event: P0444 | Action: Substitution
+2026-06-05 20:33:56 | INFO | P04_NBA | Sent Event: P0445 | Action: Substitution
+2026-06-05 20:33:56 | INFO | P04_NBA | Sent Event: P0446 | Action: Substitution
+2026-06-05 20:33:56 | INFO | P04_NBA | Sent Event: P0447 | Action: Substitution
+2026-06-05 20:33:57 | INFO | P04_NBA | Sent Event: P0448 | Action: Substitution
+2026-06-05 20:33:57 | INFO | P04_NBA | Sent Event: P0455 | Action: Free Throw
+2026-06-05 20:33:57 | INFO | P04_NBA | Sent Event: P0456 | Action: Missed Shot
+2026-06-05 20:33:57 | INFO | P04_NBA | Sent Event: P0457 | Action: Rebound
+2026-06-05 20:33:57 | INFO | P04_NBA | Sent Event: P0473 | Action: Missed Shot
+2026-06-05 20:33:57 | INFO | P04_NBA | Sent Event: P0474 | Action: Rebound
+2026-06-05 20:33:57 | INFO | C04_NBA | Accepted NBA event: P0457 | Team: SAS | Action: Rebound
+2026-06-05 20:33:58 | INFO | P04_NBA | Sent Event: P0458 | Action: Turnover
+2026-06-05 20:33:58 | INFO | C04_NBA | Accepted NBA event: P0474 | Team: OKC | Action: Rebound
+2026-06-05 20:33:58 | INFO | P04_NBA | Sent Event: P0459 | Action: Missed Shot
+2026-06-05 20:33:58 | INFO | P04_NBA | Sent Event: P0460 | Action: Rebound
+2026-06-05 20:33:58 | INFO | C04_NBA | Accepted NBA event: P0458 | Team: OKC | Action: Turnover
+2026-06-05 20:33:58 | INFO | P04_NBA | Sent Event: P0461 | Action: Missed Shot
+2026-06-05 20:33:58 | INFO | P04_NBA | Sent Event: P0462 | Action: Rebound
+2026-06-05 20:33:58 | INFO | C04_NBA | Accepted NBA event: P0460 | Team: SAS | Action: Rebound
+2026-06-05 20:33:58 | INFO | P04_NBA | Sent Event: P0485 | Action: Missed Shot
+2026-06-05 20:33:58 | INFO | P04_NBA | Sent Event: P0486 | Action: Rebound
+2026-06-05 20:33:58 | INFO | C04_NBA | Accepted NBA event: P0462 | Team: SAS | Action: Rebound
+2026-06-05 20:33:59 | INFO | P04_NBA | Sent Event: P0463 | Action: Foul
+2026-06-05 20:33:59 | INFO | P04_NBA | Sent Event: P0465 | Action: Missed Shot
+2026-06-05 20:33:59 | INFO | C04_NBA | Accepted NBA event: P0463 | Team: OKC | Action: Foul
+2026-06-05 20:33:59 | INFO | P04_NBA | Sent Event: P0466 | Action: Rebound
+2026-06-05 20:33:59 | INFO | P04_NBA | Sent Event: P0467 | Action: Foul
+2026-06-05 20:33:59 | INFO | C04_NBA | Accepted NBA event: P0466 | Team: SAS | Action: Rebound
+2026-06-05 20:33:59 | INFO | P04_NBA | Sent Event: P0469 | Action: Free Throw
+2026-06-05 20:33:59 | INFO | P04_NBA | Sent Event: P0470 | Action: Rebound
+2026-06-05 20:33:59 | INFO | C04_NBA | Accepted NBA event: P0467 | Team: OKC | Action: Foul
+2026-06-05 20:33:59 | INFO | P04_NBA | Sent Event: P0471 | Action: Substitution
+2026-06-05 20:34:00 | INFO | P04_NBA | Sent Event: P0475 | Action: Free Throw
+2026-06-05 20:34:00 | INFO | P04_NBA | Sent Event: P0476 | Action: Foul
+2026-06-05 20:34:00 | INFO | P04_NBA | Sent Event: P0478 | Action: Free Throw
+2026-06-05 20:34:00 | INFO | C04_NBA | Accepted NBA event: P0476 | Team: SAS | Action: Foul
+2026-06-05 20:34:00 | INFO | P04_NBA | Sent Event: P0479 | Action: Free Throw
+2026-06-05 20:34:00 | INFO | P04_NBA | Sent Event: P0480 | Action: Missed Shot
+2026-06-05 20:34:00 | INFO | P04_NBA | Sent Event: P0481 | Action: Rebound
+2026-06-05 20:34:00 | INFO | P04_NBA | Sent Event: P0482 | Action: Foul
+2026-06-05 20:34:01 | INFO | C04_NBA | Accepted NBA event: P0481 | Team: OKC | Action: Rebound
+2026-06-05 20:34:01 | INFO | P04_NBA | Sent Event: P0484 | Action: Free Throw
+2026-06-05 20:34:01 | INFO | P04_NBA | Sent Event: P0487 | Action: Free Throw
+2026-06-05 20:34:01 | INFO | C04_NBA | Accepted NBA event: P0482 | Team: SAS | Action: Foul
+2026-06-05 20:34:01 | INFO | P04_NBA | Sent Event: P0488 | Action: Free Throw
+2026-06-05 20:34:01 | INFO | P04_NBA | Sent Event: P0489 | Action: Missed Shot
+2026-06-05 20:34:01 | INFO | P04_NBA | Sent Event: P0490 | Action: Rebound
+2026-06-05 20:34:01 | INFO | P04_NBA | Sent Event: P0491 | Action: Missed Shot
+2026-06-05 20:34:02 | INFO | P04_NBA | Sent Event: P0492 | Action: Rebound
+2026-06-05 20:34:02 | INFO | C04_NBA | Accepted NBA event: P0490 | Team: SAS | Action: Rebound
+2026-06-05 20:34:02 | INFO | P04_NBA | Sent Event: P0493 | Action: Missed Shot
+2026-06-05 20:34:02 | INFO | C04_NBA | Accepted NBA event: P0492 | Team: SAS | Action: Rebound
+2026-06-05 20:34:02 | INFO | P04_NBA | Sent Event: P0494 | Action: Rebound
+2026-06-05 20:34:02 | INFO | P04_NBA | Sent Event: P0495 | Action: Foul
+2026-06-05 20:34:02 | INFO | P04_NBA | Sent Event: P0497 | Action: Free Throw
+2026-06-05 20:34:02 | INFO | C04_NBA | Accepted NBA event: P0495 | Team: SAS | Action: Foul
+2026-06-05 20:34:02 | INFO | P04_NBA | Sent Event: P0498 | Action: Substitution
+2026-06-05 20:34:02 | INFO | P04_NBA | Sent Event: P0499 | Action: Substitution
+2026-06-05 20:34:03 | INFO | P04_NBA | Sent Event: P0502 | Action: Free Throw
+2026-06-05 20:34:03 | INFO | P04_NBA | Sent Event: P0503 | Action: Made Shot
+2026-06-05 20:34:03 | INFO | P04_NBA | Sent Event: P0504 | Action: Missed Shot
+2026-06-05 20:34:03 | INFO | P04_NBA | Sent Event: P0505 | Action: Rebound
+2026-06-05 20:34:03 | INFO | P04_NBA | Sent Event: P0510 | Action: Missed Shot
+2026-06-05 20:34:03 | INFO | P04_NBA | Sent Event: P0510 | Action: Unknown
+2026-06-05 20:34:03 | INFO | C04_NBA | Accepted NBA event: P0505 | Team: SAS | Action: Rebound
+2026-06-05 20:34:03 | INFO | P04_NBA | Sent Event: P0512 | Action: Rebound
+2026-06-05 20:34:04 | INFO | P04_NBA | Sent Event: P0508 | Action: Timeout
+2026-06-05 20:34:04 | INFO | P04_NBA | Sent Event: P0509 | Action: Instant Replay
+2026-06-05 20:34:04 | INFO | P04_NBA | Sent Event: P0513 | Action: Substitution
+2026-06-05 20:34:04 | INFO | P04_NBA | Sent Event: P0514 | Action: Substitution
+2026-06-05 20:34:04 | INFO | P04_NBA | Sent Event: P0515 | Action: Substitution
+2026-06-05 20:34:04 | INFO | P04_NBA | Sent Event: P0519 | Action: Missed Shot
+2026-06-05 20:34:04 | INFO | P04_NBA | Sent Event: P0520 | Action: Rebound
+2026-06-05 20:34:05 | INFO | P04_NBA | Sent Event: P0521 | Action: Missed Shot
+2026-06-05 20:34:05 | INFO | P04_NBA | Sent Event: P0522 | Action: Rebound
+2026-06-05 20:34:05 | INFO | C04_NBA | Accepted NBA event: P0520 | Team: SAS | Action: Rebound
+2026-06-05 20:34:05 | INFO | P04_NBA | Sent Event: P0523 | Action: Made Shot
+2026-06-05 20:34:05 | INFO | C04_NBA | Accepted NBA event: P0522 | Team: OKC | Action: Rebound
+2026-06-05 20:34:05 | INFO | P04_NBA | Sent Event: P0525 | Action: Timeout
+2026-06-05 20:34:05 | INFO | P04_NBA | Sent Event: P0526 | Action: Missed Shot
+2026-06-05 20:34:05 | INFO | P04_NBA | Sent Event: P0527 | Action: Rebound
+2026-06-05 20:34:06 | INFO | P04_NBA | Sent Event: P0528 | Action: Foul
+2026-06-05 20:34:06 | INFO | C04_NBA | Accepted NBA event: P0527 | Team: SAS | Action: Rebound
+2026-06-05 20:34:06 | INFO | P04_NBA | Sent Event: P0530 | Action: Free Throw
+2026-06-05 20:34:06 | INFO | P04_NBA | Sent Event: P0531 | Action: Substitution
+2026-06-05 20:34:06 | INFO | C04_NBA | Accepted NBA event: P0528 | Team: OKC | Action: Foul
+2026-06-05 20:34:06 | INFO | P04_NBA | Sent Event: P0532 | Action: Substitution
+2026-06-05 20:34:06 | INFO | P04_NBA | Sent Event: P0535 | Action: Free Throw
+2026-06-05 20:34:06 | INFO | P04_NBA | Sent Event: P0536 | Action: Rebound
+2026-06-05 20:34:06 | INFO | P04_NBA | Sent Event: P0537 | Action: Missed Shot
+2026-06-05 20:34:07 | INFO | C04_NBA | Accepted NBA event: P0536 | Team: OKC | Action: Rebound
+2026-06-05 20:34:07 | INFO | P04_NBA | Sent Event: P0538 | Action: Rebound
+2026-06-05 20:34:07 | INFO | P04_NBA | Sent Event: P0539 | Action: Missed Shot
+2026-06-05 20:34:07 | INFO | C04_NBA | Accepted NBA event: P0538 | Team: SAS | Action: Rebound
+2026-06-05 20:34:07 | INFO | P04_NBA | Sent Event: P0540 | Action: Rebound
+2026-06-05 20:34:07 | INFO | P04_NBA | Sent Event: P0542 | Action: Rebound
+2026-06-05 20:34:07 | INFO | C04_NBA | Accepted NBA event: P0540 | Team: OKC | Action: Rebound
+2026-06-05 20:34:07 | INFO | P04_NBA | Sent Event: P0551 | Action: Foul
+2026-06-05 20:34:07 | INFO | P04_NBA | Sent Event: P0553 | Action: Free Throw
+2026-06-05 20:34:07 | INFO | C04_NBA | Accepted NBA event: P0551 | Team: OKC | Action: Foul
+2026-06-05 20:34:07 | INFO | P04_NBA | Sent Event: P0554 | Action: Rebound
+2026-06-05 20:34:08 | INFO | P04_NBA | Sent Event: P0555 | Action: Free Throw
+2026-06-05 20:34:08 | INFO | P04_NBA | Sent Event: P0556 | Action: Made Shot
+2026-06-05 20:34:08 | INFO | P04_NBA | Sent Event: P0558 | Action: Made Shot
+2026-06-05 20:34:08 | INFO | P04_NBA | Sent Event: P0560 | Action: Made Shot
+2026-06-05 20:34:08 | INFO | P04_NBA | Sent Event: P0562 | Action: Missed Shot
+2026-06-05 20:34:08 | INFO | P04_NBA | Sent Event: P0563 | Action: Rebound
+2026-06-05 20:34:08 | INFO | P04_NBA | Sent Event: P0564 | Action: Made Shot
+2026-06-05 20:34:09 | INFO | C04_NBA | Accepted NBA event: P0563 | Team: SAS | Action: Rebound
+2026-06-05 20:34:09 | INFO | P04_NBA | Sent Event: P0566 | Action: Missed Shot
+2026-06-05 20:34:09 | INFO | P04_NBA | Sent Event: P0567 | Action: Rebound
+2026-06-05 20:34:09 | INFO | P04_NBA | Sent Event: P0568 | Action: Turnover
+2026-06-05 20:34:09 | INFO | P04_NBA | Sent Event: P0569 | Action: Substitution
+2026-06-05 20:34:09 | INFO | P04_NBA | Sent Event: P0571 | Action: Foul
+2026-06-05 20:34:09 | INFO | P04_NBA | Sent Event: P0573 | Action: Free Throw
+2026-06-05 20:34:09 | INFO | C04_NBA | Accepted NBA event: P0571 | Team: OKC | Action: Foul
+2026-06-05 20:34:10 | INFO | P04_NBA | Sent Event: P0574 | Action: Free Throw
+2026-06-05 20:34:10 | INFO | P04_NBA | Sent Event: P0575 | Action: Foul
+2026-06-05 20:34:10 | INFO | P04_NBA | Sent Event: P0577 | Action: Free Throw
+2026-06-05 20:34:10 | INFO | C04_NBA | Accepted NBA event: P0575 | Team: SAS | Action: Foul
+2026-06-05 20:34:10 | INFO | P04_NBA | Sent Event: P0578 | Action: Rebound
+2026-06-05 20:34:10 | INFO | P04_NBA | Sent Event: P0579 | Action: Free Throw
+2026-06-05 20:34:10 | INFO | P04_NBA | Sent Event: P0580 | Action: Made Shot
+2026-06-05 20:34:10 | INFO | P04_NBA | Sent Event: P0581 | Action: Made Shot
+2026-06-05 20:34:11 | INFO | P04_NBA | Sent Event: P0583 | Action: Made Shot
+2026-06-05 20:34:11 | INFO | P04_NBA | Sent Event: P0584 | Action: Missed Shot
+2026-06-05 20:34:11 | INFO | P04_NBA | Sent Event: P0585 | Action: Rebound
+2026-06-05 20:34:11 | INFO | P04_NBA | Sent Event: P0586 | Action: Missed Shot
+2026-06-05 20:34:11 | INFO | C04_NBA | Accepted NBA event: P0585 | Team: SAS | Action: Rebound
+2026-06-05 20:34:11 | INFO | P04_NBA | Sent Event: P0587 | Action: Rebound
+2026-06-05 20:34:11 | INFO | P04_NBA | Sent Event: P0588 | Action: Missed Shot
+2026-06-05 20:34:11 | INFO | C04_NBA | Accepted NBA event: P0587 | Team: OKC | Action: Rebound
+2026-06-05 20:34:11 | INFO | P04_NBA | Sent Event: P0589 | Action: Rebound
+2026-06-05 20:34:12 | INFO | P04_NBA | Sent Event: P0590 | Action: Made Shot
+2026-06-05 20:34:12 | INFO | C04_NBA | Accepted NBA event: P0589 | Team: SAS | Action: Rebound
+2026-06-05 20:34:12 | INFO | P04_NBA | Sent Event: P0592 | Action: Timeout
+2026-06-05 20:34:12 | INFO | P04_NBA | Sent Event: P0593 | Action: Substitution
+2026-06-05 20:34:12 | INFO | P04_NBA | Sent Event: P0594 | Action: Substitution
+2026-06-05 20:34:12 | INFO | P04_NBA | Sent Event: P0595 | Action: Substitution
+2026-06-05 20:34:12 | INFO | P04_NBA | Sent Event: P0596 | Action: Substitution
+2026-06-05 20:34:12 | INFO | P04_NBA | Sent Event: P0601 | Action: Made Shot
+2026-06-05 20:34:13 | INFO | P04_NBA | Sent Event: P0603 | Action: Foul
+2026-06-05 20:34:13 | INFO | P04_NBA | Sent Event: P0605 | Action: Free Throw
+2026-06-05 20:34:13 | INFO | C04_NBA | Accepted NBA event: P0603 | Team: SAS | Action: Foul
+2026-06-05 20:34:13 | INFO | P04_NBA | Sent Event: P0606 | Action: Missed Shot
+2026-06-05 20:34:13 | INFO | P04_NBA | Sent Event: P0607 | Action: Rebound
+2026-06-05 20:34:13 | INFO | P04_NBA | Sent Event: P0608 | Action: Missed Shot
+2026-06-05 20:34:13 | INFO | C04_NBA | Accepted NBA event: P0607 | Team: OKC | Action: Rebound
+2026-06-05 20:34:13 | INFO | P04_NBA | Sent Event: P0609 | Action: Rebound
+2026-06-05 20:34:14 | INFO | P04_NBA | Sent Event: P0610 | Action: Missed Shot
+2026-06-05 20:34:14 | INFO | P04_NBA | Sent Event: P0611 | Action: Rebound
+2026-06-05 20:34:14 | INFO | C04_NBA | Accepted NBA event: P0609 | Team: SAS | Action: Rebound
+2026-06-05 20:34:14 | INFO | P04_NBA | Sent Event: P0612 | Action: Made Shot
+2026-06-05 20:34:14 | INFO | C04_NBA | Accepted NBA event: P0611 | Team: OKC | Action: Rebound
+2026-06-05 20:34:14 | INFO | P04_NBA | Sent Event: P0613 | Action: Timeout
+2026-06-05 20:34:14 | INFO | P04_NBA | Sent Event: P0614 | Action: Substitution
+2026-06-05 20:34:14 | INFO | P04_NBA | Sent Event: P0615 | Action: Substitution
+2026-06-05 20:34:14 | INFO | P04_NBA | Sent Event: P0616 | Action: Substitution
+2026-06-05 20:34:15 | INFO | P04_NBA | Sent Event: P0620 | Action: Turnover
+2026-06-05 20:34:15 | INFO | P04_NBA | Sent Event: P0620 | Action: Unknown
+2026-06-05 20:34:15 | INFO | C04_NBA | Accepted NBA event: P0620 | Team: SAS | Action: Turnover
+2026-06-05 20:34:15 | INFO | P04_NBA | Sent Event: P0622 | Action: Missed Shot
+2026-06-05 20:34:15 | INFO | P04_NBA | Sent Event: P0622 | Action: Unknown
+2026-06-05 20:34:15 | INFO | P04_NBA | Sent Event: P0624 | Action: Rebound
+2026-06-05 20:34:15 | INFO | P04_NBA | Sent Event: P0625 | Action: Made Shot
+2026-06-05 20:34:15 | INFO | C04_NBA | Accepted NBA event: P0624 | Team: SAS | Action: Rebound
+2026-06-05 20:34:15 | INFO | P04_NBA | Sent Event: P0626 | Action: Turnover
+2026-06-05 20:34:16 | INFO | P04_NBA | Sent Event: P0627 | Action: Substitution
+2026-06-05 20:34:16 | INFO | C04_NBA | Accepted NBA event: P0626 | Team: OKC | Action: Turnover
+2026-06-05 20:34:16 | INFO | P04_NBA | Sent Event: P0629 | Action: Made Shot
+2026-06-05 20:34:16 | INFO | P04_NBA | Sent Event: P0631 | Action: Made Shot
+2026-06-05 20:34:16 | INFO | P04_NBA | Sent Event: P0633 | Action: Turnover
+2026-06-05 20:34:16 | INFO | P04_NBA | Sent Event: P0633 | Action: Unknown
+2026-06-05 20:34:16 | INFO | C04_NBA | Accepted NBA event: P0633 | Team: SAS | Action: Turnover
+2026-06-05 20:34:16 | INFO | P04_NBA | Sent Event: P0635 | Action: Missed Shot
+2026-06-05 20:34:16 | INFO | P04_NBA | Sent Event: P0636 | Action: Rebound
+2026-06-05 20:34:17 | INFO | P04_NBA | Sent Event: P0637 | Action: Missed Shot
+2026-06-05 20:34:17 | INFO | C04_NBA | Accepted NBA event: P0636 | Team: SAS | Action: Rebound
+2026-06-05 20:34:17 | INFO | P04_NBA | Sent Event: P0638 | Action: Rebound
+2026-06-05 20:34:17 | INFO | P04_NBA | Sent Event: P0639 | Action: Made Shot
+2026-06-05 20:34:17 | INFO | C04_NBA | Accepted NBA event: P0638 | Team: SAS | Action: Rebound
+2026-06-05 20:34:17 | INFO | P04_NBA | Sent Event: P0640 | Action: Timeout
+2026-06-05 20:34:17 | INFO | P04_NBA | Sent Event: P0641 | Action: Substitution
+2026-06-05 20:34:17 | INFO | P04_NBA | Sent Event: P0642 | Action: Substitution
+2026-06-05 20:34:17 | INFO | P04_NBA | Sent Event: P0643 | Action: Substitution
+2026-06-05 20:34:18 | INFO | P04_NBA | Sent Event: P0647 | Action: Made Shot
+2026-06-05 20:34:18 | INFO | P04_NBA | Sent Event: P0648 | Action: Timeout
+2026-06-05 20:34:18 | INFO | P04_NBA | Sent Event: P0649 | Action: Substitution
+2026-06-05 20:34:18 | INFO | P04_NBA | Sent Event: P0651 | Action: Made Shot
+2026-06-05 20:34:18 | INFO | P04_NBA | Sent Event: P0652 | Action: Made Shot
+2026-06-05 20:34:18 | INFO | P04_NBA | Sent Event: P0674 | Action: Turnover
+2026-06-05 20:34:19 | INFO | P04_NBA | Sent Event: P0674 | Action: Unknown
+2026-06-05 20:34:19 | INFO | C04_NBA | Accepted NBA event: P0674 | Team: SAS | Action: Turnover
+2026-06-05 20:34:19 | INFO | P04_NBA | Sent Event: P0657 | Action: Missed Shot
+2026-06-05 20:34:19 | INFO | P04_NBA | Sent Event: P0658 | Action: Rebound
+2026-06-05 20:34:19 | INFO | P04_NBA | Sent Event: P0660 | Action: Missed Shot
+2026-06-05 20:34:19 | INFO | P04_NBA | Sent Event: P0660 | Action: Unknown
+2026-06-05 20:34:19 | INFO | P04_NBA | Sent Event: P0662 | Action: Rebound
+2026-06-05 20:34:19 | INFO | P04_NBA | Sent Event: P0663 | Action: Made Shot
+2026-06-05 20:34:19 | INFO | C04_NBA | Accepted NBA event: P0662 | Team: OKC | Action: Rebound
+2026-06-05 20:34:20 | INFO | P04_NBA | Sent Event: P0665 | Action: Turnover
+2026-06-05 20:34:20 | INFO | P04_NBA | Sent Event: P0665 | Action: Unknown
+2026-06-05 20:34:20 | INFO | C04_NBA | Accepted NBA event: P0665 | Team: SAS | Action: Turnover
+2026-06-05 20:34:20 | INFO | P04_NBA | Sent Event: P0667 | Action: Missed Shot
+2026-06-05 20:34:20 | INFO | P04_NBA | Sent Event: P0669 | Action: Rebound
+2026-06-05 20:34:20 | INFO | P04_NBA | Sent Event: P0670 | Action: Substitution
+2026-06-05 20:34:20 | INFO | P04_NBA | Sent Event: P0672 | Action: Substitution
+2026-06-05 20:34:20 | INFO | P04_NBA | Sent Event: P0676 | Action: Missed Shot
+2026-06-05 20:34:21 | INFO | P04_NBA | Sent Event: P0677 | Action: Rebound
+2026-06-05 20:34:21 | INFO | P04_NBA | Sent Event: P0678 | Action: Made Shot
+2026-06-05 20:34:21 | INFO | C04_NBA | Accepted NBA event: P0677 | Team: SAS | Action: Rebound
+2026-06-05 20:34:21 | INFO | P04_NBA | Sent Event: P0679 | Action: Made Shot
+2026-06-05 20:34:21 | INFO | P04_NBA | Sent Event: P0680 | Action: Timeout
+2026-06-05 20:34:21 | INFO | P04_NBA | Sent Event: P0681 | Action: Substitution
+2026-06-05 20:34:21 | INFO | P04_NBA | Sent Event: P0682 | Action: Substitution
+2026-06-05 20:34:21 | INFO | P04_NBA | Sent Event: P0683 | Action: Substitution
+2026-06-05 20:34:22 | INFO | P04_NBA | Sent Event: P0687 | Action: Turnover
+2026-06-05 20:34:22 | INFO | P04_NBA | Sent Event: P0687 | Action: Unknown
+2026-06-05 20:34:22 | INFO | C04_NBA | Accepted NBA event: P0687 | Team: SAS | Action: Turnover
+2026-06-05 20:34:22 | INFO | P04_NBA | Sent Event: P0689 | Action: Missed Shot
+2026-06-05 20:34:22 | INFO | P04_NBA | Sent Event: P0690 | Action: Rebound
+2026-06-05 20:34:22 | INFO | P04_NBA | Sent Event: P0691 | Action: Turnover
+2026-06-05 20:34:22 | INFO | C04_NBA | Accepted NBA event: P0690 | Team: SAS | Action: Rebound
+2026-06-05 20:34:22 | INFO | P04_NBA | Sent Event: P0691 | Action: Unknown
+2026-06-05 20:34:22 | INFO | P04_NBA | Sent Event: P0693 | Action: Foul
+2026-06-05 20:34:23 | INFO | C04_NBA | Accepted NBA event: P0691 | Team: SAS | Action: Turnover
+2026-06-05 20:34:23 | INFO | P04_NBA | Sent Event: P0695 | Action: Substitution
+2026-06-05 20:34:23 | INFO | C04_NBA | Accepted NBA event: P0693 | Team: SAS | Action: Foul
+2026-06-05 20:34:23 | INFO | P04_NBA | Sent Event: P0696 | Action: Substitution
+2026-06-05 20:34:23 | INFO | P04_NBA | Sent Event: P0697 | Action: Substitution
+2026-06-05 20:34:23 | INFO | P04_NBA | Sent Event: P0701 | Action: Missed Shot
+2026-06-05 20:34:23 | INFO | P04_NBA | Sent Event: P0702 | Action: Rebound
+2026-06-05 20:34:23 | INFO | P04_NBA | Sent Event: P0704 | Action: Missed Shot
+2026-06-05 20:34:24 | INFO | P04_NBA | Sent Event: P0705 | Action: Rebound
+2026-06-05 20:34:24 | INFO | P04_NBA | Sent Event: P0706 | Action: Made Shot
+2026-06-05 20:34:24 | INFO | P04_NBA | Producer flushed and closed.
+2026-06-05 20:34:24 | INFO | C04_NBA | Accepted NBA event: P0705 | Team: SAS | Action: Rebound
