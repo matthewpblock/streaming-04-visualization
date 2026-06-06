@@ -173,6 +173,12 @@ bin/kafka-topics.sh --create \
   --partitions 1 \
   --replication-factor 1 \
   --topic streaming-04-visualization-critical-section
+
+bin/kafka-topics.sh --create \
+  --bootstrap-server localhost:9092 \
+  --partitions 1 \
+  --replication-factor 1 \
+  --topic streaming-04-nba
 ```
 
 ### In VS Code Terminal 3: Run Project and Producer (producer)
