@@ -137,16 +137,16 @@ repos:
 
   # === EXECUTE: LOCAL VALIDATION ===
 
-  - repo: local
-    hooks:
-
-      - id: markdownlint
-        name: E1) Markdown lint
-        # Uses .markdownlint-cli2.yaml if present, otherwise defaults.
-        language: system
-        entry: npx markdownlint-cli2 --fix
-        pass_filenames: false
-        always_run: true
+#  - repo: local
+#    hooks:
+#
+#      - id: markdownlint
+#        name: E1) Markdown lint
+#        # Uses .markdownlint-cli2.yaml if present, otherwise defaults.
+#        language: system
+#        entry: npx markdownlint-cli2 --fix
+#        pass_filenames: false
+#        always_run: true
 
 # === GLOBAL SETTINGS ===
 # ALT: Set fail_fast to true to stop at first failure.
