@@ -47,6 +47,10 @@ from datafun_streaming.kafka.kafka_consumer_utils import (
     consume_kafka_message,
     create_consumer,
 )
+from datafun_streaming.kafka.kafka_producer_utils import (
+    create_producer,
+    produce_kafka_message,
+)
 from datafun_streaming.kafka.kafka_settings import KafkaSettings
 from datafun_streaming.stats.stats_utils import RunningStats
 from datafun_toolkit.logger import get_logger, log_header, log_path
@@ -59,7 +63,7 @@ from streaming.data_validation.data_contract_case import (
     SALES_REQUIRED_FIELDS,
     validate_required_fields,
 )
-from streaming.visualizations.live_visualizations_case import (
+from streaming.visualizations.live_visualizations_critical_section import (
     close_live_chart,
     init_live_chart,
     save_live_chart,
@@ -88,7 +92,7 @@ DATA_DIR: Final[Path] = ROOT_DIR / "data"
 OUTPUT_DIR: Final[Path] = DATA_DIR / "output"
 
 OUTPUT_CSV: Final[Path] = OUTPUT_DIR / "consumed_sales.csv"
-OUTPUT_CHART: Final[Path] = OUTPUT_DIR / "sales_chart_case.png"
+OUTPUT_CHART: Final[Path] = OUTPUT_DIR / "sales_chart_critical_section.png"
 
 REGIONS_CSV: Final[Path] = DATA_DIR / "regions.csv"
 PRODUCTS_CSV: Final[Path] = DATA_DIR / "products.csv"
@@ -203,13 +207,15 @@ def get_kafka_consumer(settings: KafkaSettings) -> Any:
 # ===========================================================================
 
 
-def initialize_output() -> tuple[Any, Any, list[int], list[float], RunningStats]:
+def initialize_output() -> tuple[
+    Any, Any, list[int], list[float], list[float], dict[str, float], RunningStats
+]:
     """Initialize output directory, CSV, chart, and stats.
 
     NEW: Very similar to earlier, but now also provides a chart.
 
     Returns:
-        A tuple of (figure, axis, x_values, y_values, stats).
+        A tuple of (figure, axis, x_values, y_values, ma_values, region_sales, stats).
     """
     LOG.info("Initializing output...")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -219,7 +225,7 @@ def initialize_output() -> tuple[Any, Any, list[int], list[float], RunningStats]
     LOG.info(f"Output CSV cleared: {OUTPUT_CSV.name}")
 
     # NEW: Initialize the live chart and get the figure, axis, and data lists.
-    figure, axis, x_values, y_values = init_live_chart()
+    figure, axis, x_values, y_values, ma_values, region_sales = init_live_chart()
     LOG.info("Live chart initialized.")
 
     # NEW: We can't just return RunningStats(),
@@ -227,7 +233,7 @@ def initialize_output() -> tuple[Any, Any, list[int], list[float], RunningStats]
     stats = RunningStats()
 
     # NEW: Update the return statement to include chart features as well.
-    return figure, axis, x_values, y_values, stats
+    return figure, axis, x_values, y_values, ma_values, region_sales, stats
 
 
 def load_reference_data() -> dict[str, float]:
@@ -258,6 +264,8 @@ def process_message(
     axis: Any,
     x_values: list[int],
     y_values: list[float],
+    ma_values: list[float],
+    region_sales: dict[str, float],
 ) -> dict[str, Any] | None:
     """Process one consumed message.
 
@@ -282,6 +290,8 @@ def process_message(
         axis: Matplotlib axis.
         x_values: List of x-axis values already shown.
         y_values: List of y-axis values already shown.
+        ma_values: List of moving average values.
+        region_sales: Dictionary tracking cumulative sales per region.
 
     Returns:
         The enriched row, or None if validation failed.
@@ -310,6 +320,8 @@ def process_message(
         axis=axis,
         x_values=x_values,
         y_values=y_values,
+        ma_values=ma_values,
+        region_sales=region_sales,
         message=enriched,
     )
 
@@ -331,6 +343,10 @@ def consume_messages(
     axis: Any,
     x_values: list[int],
     y_values: list[float],
+    ma_values: list[float],
+    region_sales: dict[str, float],
+    dlq_producer: Any,
+    dlq_topic: str,
 ) -> tuple[int, int]:
     """Consume and process messages from the Kafka topic.
 
@@ -349,6 +365,10 @@ def consume_messages(
         axis: Matplotlib axis.
         x_values: List of x-axis values already shown.
         y_values: List of y-axis values already shown.
+        ma_values: List of moving average values.
+        region_sales: Dictionary tracking cumulative sales per region.
+        dlq_producer: Kafka producer for dead letter queue.
+        dlq_topic: Kafka topic name for dead letter queue.
 
     Returns:
         A tuple of (consumed_count, skipped_count).
@@ -383,6 +403,8 @@ def consume_messages(
             axis=axis,
             x_values=x_values,
             y_values=y_values,
+            ma_values=ma_values,
+            region_sales=region_sales,
         )
 
         if enriched is None:
@@ -390,6 +412,15 @@ def consume_messages(
             LOG.warning("MESSAGE REJECTED")
             LOG.warning(f"order={row.get('order_id', '?')}")
             LOG.warning(f"skipped={skipped_count}")
+
+            # Send rejected message to Dead Letter Queue (DLQ)
+            produce_kafka_message(
+                producer=dlq_producer,
+                topic=dlq_topic,
+                key=str(row.get("region_id", "unknown")),
+                message=row,
+            )
+            LOG.info(f"Sent rejected message to DLQ topic: {dlq_topic}")
             continue
 
         append_csv_row(
@@ -486,7 +517,14 @@ def main() -> None:
 
     # NEW: Add visualization parameters to the
     # unpacking of initialize_output().
-    figure, axis, x_values, y_values, stats = initialize_output()
+    figure, axis, x_values, y_values, ma_values, region_sales, stats = (
+        initialize_output()
+    )
+
+    # NEW: Initialize the Dead Letter Queue Producer
+    dlq_topic = f"{settings.topic}-dlq"
+    LOG.info(f"Creating DLQ producer for topic: {dlq_topic}")
+    dlq_producer = create_producer(settings)
 
     region_lookup = load_reference_data()
 
@@ -508,10 +546,15 @@ def main() -> None:
                 axis=axis,
                 x_values=x_values,
                 y_values=y_values,
+                ma_values=ma_values,
+                region_sales=region_sales,
+                dlq_producer=dlq_producer,
+                dlq_topic=dlq_topic,
             )
         finally:
             # Close the Kafka consumer in the inner finally block
             # to ensure it happens before we close the live chart.
+            dlq_producer.flush()
             consumer.close()
             LOG.info("Kafka consumer closed.")
 

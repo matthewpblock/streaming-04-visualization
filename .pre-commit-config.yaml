@@ -59,7 +59,6 @@ exclude: |
     _minted.*/|
     build/|
     coverage\.xml|
-    data/output/|
     dist/|
     htmlcov/|
     lake-packages/|

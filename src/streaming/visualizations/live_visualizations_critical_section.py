@@ -111,6 +111,7 @@ def update_live_chart(
         region_sales: Dictionary tracking cumulative sales per region.
         message: One enriched Kafka message dictionary.
 
+
     Returns:
         None.
     """
